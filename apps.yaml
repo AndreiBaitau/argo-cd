@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application 
+metadata:
+  name: jenkinsapp
+  namespace: ci-cd
+spec:  
+  project: default
+  source:
+    repoURL: 'https://andreibaitau.github.io/jenkins-helm/'
+    targetRevision: 0.1.0
+    helm:
+      valueFiles:
+      - values.yaml
+    chart: jenkins
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: ci-cd
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
