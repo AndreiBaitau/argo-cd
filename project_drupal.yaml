@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1.18.1
+apiVersion: argoproj.io/v1.19.1
 kind: Application
 metadata:
   name: drupal
@@ -11,5 +11,5 @@ spec:
   source:
     chart: drupal
     repoURL: 'https://andreibaitau.github.io/project_drupal/'
-    targetRevision: 1.18.1
+    targetRevision: 1.19.1
 
