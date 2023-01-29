@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: drupal
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://andreibaitau.github.io/project_drupal/'
+    targetRevision: 1.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+  chart: drupal
+ destination:
+   server: 'https://kubernetes.default.svc'
+   namespace: projects
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://andreibaitau.github.io/project_wordpress/'
+    targetRevision: 1.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+  chart: wordpress
+ destination:
+   server: 'https://kubernetes.default.svc'
+   namespace: projects
