@@ -10,8 +10,8 @@ spec:
     targetRevision: 1.0.1
     helm:
       valueFiles:
-        - values.yaml
-  chart: drupal
+      - values.yaml
+    chart: drupal
  destination:
    server: 'https://kubernetes.default.svc'
    namespace: projects
@@ -29,8 +29,8 @@ spec:
     targetRevision: 1.0.1
     helm:
       valueFiles:
-        - values.yaml
-  chart: wordpress
+      - values.yaml
+    chart: wordpress
  destination:
    server: 'https://kubernetes.default.svc'
    namespace: projects
