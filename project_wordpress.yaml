@@ -4,7 +4,7 @@ metadata:
   name: wordpress
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argo-baitov
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argocd-baitov
 spec:
   destination:
     namespace: projects
