@@ -11,4 +11,4 @@ spec:
   source:
     chart: wordpress
     repoURL: 'https://andreibaitau.github.io/project_wordpress/'
-    targetRevision: 1.27.1
+    targetRevision: 1.28.1
