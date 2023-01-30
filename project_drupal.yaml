@@ -11,5 +11,5 @@ spec:
   source:
     chart: drupal
     repoURL: 'https://andreibaitau.github.io/project_drupal/'
-    targetRevision: 1.25.1
+    targetRevision: 1.26.1
 
